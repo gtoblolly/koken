@@ -4,8 +4,8 @@
 
 | Column     | Type   | Options     |
 | --------   | ------ | ----------- |
-| created_at | string | null: false |
 | title      | string | null: false |
+| image      | text   |             |
 | comment    | text   | null: false |
 
 ## contact テーブル
