@@ -4,6 +4,7 @@ class TweetsController < ApplicationController
 
   def create
     Tweet.create(tweet_params)
+    render :new
   end
 
   def new
