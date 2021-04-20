@@ -10,6 +10,26 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-nav">
+        <div class="header-logo">
+          <h2>
+            <a href="/">コーケン株式会</a>
+          </h2>
+        </div>
+        <div class="header-list">
+          <ul>
+            <li>会社案内</li>
+            <li>事業内容</li>
+            <li>施工事例</li>
+            <li>メディア</li>
+            <li><%= link_to "お問い合わせ", contacts_path %></li>
+            <li><%= link_to image_tag("insta1.png"), 'https://www.instagram.com/ko_ken1215/' %></li>
+            <li><%= link_to image_tag("fb.png"), 'https://www.facebook.com/kohken1215' %></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
