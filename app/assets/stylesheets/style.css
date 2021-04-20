@@ -32,3 +32,28 @@ li {
 .header-list {
   width: 50%;
 }
+
+
+.main {
+  background-color: wheat;
+  height: 1200px;
+}
+
+.main_view {
+  position: relative;
+}
+
+.main_view p {
+  color: rgb(62, 177, 77);
+  font-size: 100px;
+  font-family: 'A1 Mincho', sans-serif;
+  position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.main_text {
+  color: cornflowerblue;
+  font-size: 25px;
+  text-align: center;
+}

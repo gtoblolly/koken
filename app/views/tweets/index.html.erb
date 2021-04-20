@@ -1,8 +1,25 @@
-<h1>TopPage</h1>
+<div class="main">
+
+  <h1>TopPage</h1>
 
 <%= link_to "管理画面へ", new_tweet_path %>
 
-<% @tweets.each do |tweet|%>
-  <%= tweet.title%>
-  <%= image_tag tweet.image if tweet.image.attached? %>
-<% end %>
+  <div class="main_view">
+    <%= image_tag "top.jpg", :size =>'1400x800'%>
+    <p>人々を幸せに。</p>
+  </div>
+
+  <div class="main_text">
+    <p>デザインを武器に幸せな暮らしづくり</p>
+    <p>社会貢献で快適を広くとどけたい</p>
+  </div>
+
+</div>
+
+
+<div class="media">
+  <% @tweets.each do |tweet|%>
+    <%= tweet.title %>
+   <%= image_tag tweet.image.variant(resize: '100x100') if tweet.image.attached? %>
+  <% end %>
+</div>
