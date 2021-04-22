@@ -86,3 +86,29 @@ li {
   width: 300px;
   padding: 30px 0 0 30px;
 }
+
+
+.business {
+  height: 600px;
+  background-color: lightgrey;
+}
+
+.business_title{
+  font-size: 20px;
+}
+
+.business_text {
+  padding-left: 200px;
+}
+
+.bisiness_contents {
+  display: flex;
+}
+
+.business_image {
+  padding-right: 200px;
+}
+
+.business_comment {
+  font-size: 19px;
+}
