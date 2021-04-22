@@ -1,11 +1,7 @@
 <div class="main">
 
-  <h1>TopPage</h1>
-
-<%= link_to "管理画面へ", new_tweet_path %>
-
   <div class="main_view">
-    <%= image_tag "top.jpg", :size =>'1400x800'%>
+    <%= image_tag "top.jpg", :size =>'1665x830'%>
     <p>人々を幸せに。</p>
   </div>
 
@@ -18,8 +14,19 @@
 
 
 <div class="media">
-  <% @tweets.each do |tweet|%>
-    <%= tweet.title %>
-   <%= image_tag tweet.image.variant(resize: '100x100') if tweet.image.attached? %>
-  <% end %>
+  <div class="title_bar">
+    <h1>メディア</h1>
+  </div>
+  <div class="posts">
+      <% @tweets.each do |tweet|%>
+      <div class="post">
+        <div class="media_image">  
+          <%= image_tag tweet.image.variant(resize: '200x200') if tweet.image.attached? %>
+        </div>
+        <div class="media_title">
+          <%= tweet.title %>
+        </div>
+        </div>
+      <% end %>    
+  </div>
 </div>
