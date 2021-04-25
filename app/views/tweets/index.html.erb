@@ -1,8 +1,158 @@
-<h1>TopPage</h1>
+<div class="main">
 
-<%= link_to "管理画面へ", new_tweet_path %>
+  <div class="main_view">
+    <%= image_tag "top.jpg", :size =>'1665x830'%>
+    <p>人々を幸せに。</p>
+  </div>
 
-<% @tweets.each do |tweet|%>
-  <%= tweet.title%>
-  <%= image_tag tweet.image if tweet.image.attached? %>
-<% end %>
+  <div class="main_text">
+    <p>デザインを武器に幸せな暮らしづくり</p>
+    <p>社会貢献で快適を広くとどけたい</p>
+  </div>
+
+</div>
+
+
+<div class="media">
+  <div class="title_bar">
+    <h1>メディア</h1>
+  </div>
+  <div class="posts">
+      <% @tweets.each do |tweet|%>
+      <div class="post">
+        <div class="media_image">  
+          <%= image_tag tweet.image.variant(resize: '200x200') if tweet.image.attached? %>
+        </div>
+        <div class="media_title">
+          <%= tweet.title %>
+        </div>
+      </div>
+      <% end %>    
+  </div>
+</div>
+
+
+<div class="business">
+  <div class="title_bar">
+    <h1>事業内容</h1>
+  </div>
+  <div class="bisiness_contents">
+    <div class="business_text">
+      <div class="business_title">
+        <h2>建築事業を柱に</h2>
+      </div>
+      <div class="business_comment">
+        <p>地域に住むお客様の家を、より長く、より快適に過ごしていただけるように、建物内外の補強改善、機能美改修、趣味の部屋づくり、また、ペット（猫）との共生住宅改修など、様々なニーズの工事に対応しております。
+          <br>
+          今よりももっと愛着のある住まいと暮らしをご提案いたします。弊社では、「お客様」はもちろん、「地域社会」、「従業員」から
+          愛される経営を実現するためにCSR活動に力を入れています。
+        </p>
+      </div>
+    </div>
+    <div class="business_image">
+      <%= image_tag "koken_logo.png" %>
+    </div>
+  </div>
+</div>
+
+
+<div class="example">
+  <div class="title_bar">
+    <h1>施工事例</h1>
+  </div>
+  <div class="example_contents">
+    <div class="example_upper-contents">
+      <div class="example_content">
+        <div class="example_image">
+          <%= image_tag "takasi.jpg", :size =>'500x500' %>
+        </div>
+        <div class="example_comment">
+          たかし様邸
+        </div>
+      </div>
+      <div class="example_content">
+        <div class="example_image">
+          <%= image_tag "hotel.jpg", :size =>'500x500' %>
+        </div>
+        <div class="example_comment">
+          幸せホテル
+        </div>
+      </div>
+    </div>
+    <div class="example_lower-contents">
+      <div class="example_content">
+        <div class="example_image">
+          <%= image_tag "kowa-king.jpg", :size =>'500x500' %>
+        </div>
+        <div class="example_comment">
+          コワーキングスペース
+        </div>
+      </div>
+      <div class="example_content">
+        <div class="example_image">
+          <%= image_tag "hanako.jpg", :size =>'500x500' %>
+        </div>
+        <div class="example_comment">
+          はなこ様邸
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ofice">
+  <div class="title_bar">
+    <h1>会社案内</h1>
+  </div>
+  <div class="ofice_image">
+    <%= image_tag "ofice.jpg", :size =>'1260x500' %>
+  </div>
+  <div class="overview">
+    <div class="overview_title">
+      <h2>概要</h2>
+    </div>
+    <div class="overview_contents">
+      <div class="overview_text">
+        住み良い街づくりのため、環境にやさしい仕事にチャレンジし、<br>
+お客様の喜びや感動を最も大切に考えております。<br>
+私たちは、お客様から信頼され、愛される企業となれるよう日々努力して参ります。<br>
+今後ともご支援、ご愛顧を賜りますよう心よりお願い申し上げます。
+      </div>
+      <div class="overview_image">
+        <%= image_tag "hiraoka.jpg", :size =>'540x500' %>
+      </div>
+    </div>
+  </div>
+  <div class="history">
+    <div class="history_title">
+      <h2>沿革</h2>
+    </div>
+    <div class="history_contents">
+      <div class="history_content">
+        <div class="history_year">
+          2015年
+        </div>
+        <div class="history_text">
+          個人事業コーケン設立
+        </div>
+      </div>
+      <div class="history_content">
+        <div class="history_year">
+          2019年
+        </div>
+        <div class="history_text">
+          フェイスブック立ち上げ
+        </div>
+      </div>
+      <div class="history_content">
+        <div class="history_year">
+          2020年
+        </div>
+        <div class="history_text">
+          コーケン株式会社設立
+        </div>
+      </div>
+    </div>
+  <div>
+</div>
