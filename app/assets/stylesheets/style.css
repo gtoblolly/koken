@@ -166,3 +166,18 @@ li {
   font-size: 19px;
   padding-left: 100px;
 }
+
+
+.show_tweet {
+  padding-top: 200px;
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+.show_title {
+  font-size: 40px;
+}
+
+.show_comment {
+  font-size: 20px;
+}

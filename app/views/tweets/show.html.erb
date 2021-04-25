@@ -1,0 +1,17 @@
+<div class="title_bar">
+    <h1>メディア</h1>
+</div>
+<div class="ofice_image">
+    <%= image_tag "maturi.png", :size =>'1260x500' %>
+</div>
+<div class="show_tweet">
+  <div class="show_image">
+    <%= image_tag @tweet.image %>
+  </div>
+  <div class="show_title">
+    <%= @tweet.title %>
+  </div>
+  <div class="show_comment">
+    <%= @tweet.comment %>
+  </div>
+</div>
