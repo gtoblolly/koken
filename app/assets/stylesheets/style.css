@@ -1,9 +1,8 @@
-header {
-}
-
-.header-nav {
-  display: flex;
-  background-color: #eaf3ff;
+.title_bar {
+  font-size: 20px;
+  height: 150px;
+  width: 300px;
+  padding: 30px 0 0 30px;
 }
 
 ul {
@@ -18,9 +17,12 @@ li {
   padding: 5px;
 }
 
+.header-nav {
+  display: flex;
+  background-color: #eaf3ff;
+}
+
 .header-logo {
-  color: black;
-  float: left;
   padding: 5px 30px;
   width: 50%;
 }
@@ -31,8 +33,7 @@ li {
 
 
 .main {
-  background-color: wheat;
-  height: 1200px;
+  height: 1100px;
 }
 
 .main_view {
@@ -55,9 +56,8 @@ li {
 
 
 .media {
-  background-color: rgb(183, 225, 110);
-  height: 700px;
-  overflow: scroll;
+  height: 800px;
+
 }
 
 .media_title {
@@ -68,7 +68,8 @@ li {
 }
 
 .posts {
-  
+  height: 500px;
+  overflow: scroll;
 }
 
 .post {
@@ -76,22 +77,10 @@ li {
   display: flex;
 }
 
-.media_image {
-
-}
-
-.title_bar {
-  font-size: 20px;
-  height: 150px;
-  width: 300px;
-  padding: 30px 0 0 30px;
-}
-
 
 
 .business {
-  height: 600px;
-  background-color: lightgrey;
+  height: 700px;
 }
 
 .business_title{
@@ -116,14 +105,13 @@ li {
 
 
 .example {
-  background-color: goldenrod;
+  height: 1500px;
 }
 
 .example_upper-contents {
   display: flex;
   justify-content: space-between;
   padding: 0 200px 0 200px;
-
 }
 
 .example_lower-contents {
@@ -134,4 +122,47 @@ li {
 
 .example_comment {
   font-size: 30px;
+}
+
+
+.ofice_image{
+  padding-left: 200px;
+}
+
+.overview_title {
+  padding: 50px 0 0 200px;
+  font-size: 20px;
+}
+
+.overview_contents {
+  display: flex;
+  padding-left: 200px;
+}
+
+.overview_text {
+  font-size: 19px;
+  padding-top: 150px;
+}
+
+
+.history_title {
+  padding: 50px 0 0 200px;
+  font-size: 20px;
+}
+
+.history_contents {
+  padding-left: 200px;
+}
+
+.history_content {
+  display: flex;
+}
+
+.history_year {
+  font-size: 19px;
+}
+
+.history_text {
+  font-size: 19px;
+  padding-left: 100px;
 }
