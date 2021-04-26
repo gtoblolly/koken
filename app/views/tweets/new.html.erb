@@ -7,3 +7,16 @@
   <%= form.text_area :comment, placeholder: "コメント" %>
   <%= form.submit "投稿" %>
 <% end %>
+
+<h2>投稿記事一覧<h2>
+<% @tweets.each do |tweet| %>
+  <%= link_to tweet_path(tweet.id), method: :get do %>
+  <div class="media_image">  
+    <%= image_tag tweet.image.variant(resize: '200x200') if tweet.image.attached? %>
+  </div>
+  <div class="media_title">
+    <%= tweet.title %>
+  </div>
+  <% end %>
+  <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+<% end %>
