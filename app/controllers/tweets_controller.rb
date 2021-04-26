@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
 
   def create
     Tweet.create(tweet_params)
-    render :new
+    redirect_to action: :new
   end
 
   def new
@@ -15,6 +15,12 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
+  end
+
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
+    redirect_to action: :new
   end
   
   private
