@@ -18,4 +18,5 @@
     <%= tweet.title %>
   </div>
   <% end %>
+  <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
 <% end %>
