@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+
   def index
     @tweets = Tweet.all
   end
@@ -23,6 +24,16 @@ class TweetsController < ApplicationController
     redirect_to action: :new
   end
   
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params)
+    redirect_to action: :new
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:title, :image, :comment)
