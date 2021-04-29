@@ -60,6 +60,15 @@ li {
 
 }
 
+.media_image {
+
+}
+
+.item-box-img {
+  height: 200px;
+  width: 300px;
+}
+
 .media_title {
   font-size: 40px;
   height: 150px;
@@ -180,4 +189,9 @@ li {
 
 .show_comment {
   font-size: 20px;
+}
+
+.show_img {
+  height: 500px;
+  width: 500px;
 }

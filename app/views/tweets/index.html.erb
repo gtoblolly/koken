@@ -19,17 +19,17 @@
   </div>
   <div class="posts">
       <% @tweets.each do |tweet| %>
+      <%= link_to tweet_path(tweet.id), method: :get do %>
       <div class="post">
-        <%= link_to tweet_path(tweet.id), method: :get do %>
         <div class="media_image">  
-          <%= image_tag tweet.image.variant(resize: '200x200') if tweet.image.attached? %>
+          <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
         </div>
         <div class="media_title">
           <%= tweet.title %>
         </div>
-        <% end %>
       </div>
-      <% end %>    
+      <% end %>
+      <% end %>
   </div>
 </div>
 
