@@ -195,3 +195,8 @@ li {
   height: 500px;
   width: 500px;
 }
+
+
+.form-group {
+  flex-direction: column;
+}
