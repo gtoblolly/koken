@@ -17,9 +17,17 @@ li {
   padding: 5px;
 }
 
+header {
+  background-color: #eaf3ff;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header-nav {
   display: flex;
-  background-color: #eaf3ff;
 }
 
 .header-logo {
@@ -33,14 +41,15 @@ li {
 
 
 .main {
+  padding-top: 85px;
   height: 1100px;
 }
 
-.main_view {
+.view_contents {
   position: relative;
 }
 
-.main_view p {
+.view_text {
   font-size: 150px;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   opacity: 0.5;
