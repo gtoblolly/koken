@@ -16,4 +16,40 @@ guide.addEventListener('click', () => {
 });
 });
 
+project.addEventListener('click', () => {
+  const TargetProject = document.getElementById("target_project")
+  const rect = TargetProject.getBoundingClientRect().top;
+  const offset = window.pageYOffset;
+  const gap = 50;
+  const target = rect + offset - gap;
+  window.scrollTo({
+   top: target,
+   behavior: "smooth"
+ });
+ });
+
+ instance.addEventListener('click', () => {
+  const TargetInstance = document.getElementById("target_instance")
+  const rect = TargetInstance.getBoundingClientRect().top;
+  const offset = window.pageYOffset;
+  const gap = 50;
+  const target = rect + offset - gap;
+  window.scrollTo({
+   top: target,
+   behavior: "smooth"
+ });
+ });
+
+ news.addEventListener('click', () => {
+  const TargetNews = document.getElementById("target_news")
+  const rect = TargetNews.getBoundingClientRect().top;
+  const offset = window.pageYOffset;
+  const gap = 50;
+  const target = rect + offset - gap;
+  window.scrollTo({
+   top: target,
+   behavior: "smooth"
+ });
+ });
+
 });
