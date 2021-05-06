@@ -5,14 +5,14 @@
   padding: 30px 0 0 30px;
 }
 
-ul {
+.header-list ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 5px;
 }
 
-li {
+.header-list li {
   list-style: none;
   padding: 5px;
 }
@@ -123,7 +123,7 @@ header {
 
 
 .example {
-  height: 1500px;
+  height: 2000px;
 }
 
 .example_upper-contents {
@@ -140,6 +140,12 @@ header {
 
 .example_comment {
   font-size: 30px;
+  padding-left: 20px;
+}
+
+.example_text {
+  font-size: 19px;
+  padding-left: 22px;
 }
 
 
@@ -208,4 +214,68 @@ header {
 
 .form-group {
   flex-direction: column;
+}
+
+
+
+section img{
+  max-width: 100%;
+}
+.center{
+  margin: 0 auto 0 auto;
+  max-width: 90%;
+  width: 500px;
+}
+.center ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.center li{
+  flex: 1 1 auto;
+  margin-right: 8px;
+}
+li:last-of-type{
+  margin-right: 0;
+}
+
+.big_img1 {
+  height: 500px;
+  width: 500px;
+}
+
+.big_img2 {
+  height: 500px;
+  width: 500px;
+}
+
+.big_img3 {
+  height: 500px;
+  width: 500px;
+}
+
+.big_img4 {
+  height: 500px;
+  width: 500px;
+}
+
+.thumb1 {
+  height: 150px;
+  width: 119px;
+}
+
+.thumb2 {
+  height: 150px;
+  width: 119px;
+}
+
+.thumb3 {
+  height: 150px;
+  width: 119px;
+}
+
+.thumb4 {
+  height: 150px;
+  width: 119px;
 }
