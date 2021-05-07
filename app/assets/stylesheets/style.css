@@ -169,26 +169,39 @@ header {
 }
 
 
+.profile {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 200px 0 200px;
+}
+
+
+.company {
+  font-size: 20px;
+}
+
 .history_title {
-  padding: 50px 0 0 200px;
   font-size: 20px;
 }
 
 .history_contents {
-  padding-left: 200px;
+
 }
 
 .history_content {
   display: flex;
+  margin: 16px 0;
 }
 
 .history_year {
-  font-size: 19px;
 }
 
 .history_text {
-  font-size: 19px;
   padding-left: 100px;
+}
+
+.map {
+
 }
 
 
@@ -210,6 +223,9 @@ header {
   height: 500px;
   width: 500px;
 }
+
+
+
 
 
 .form-group {
