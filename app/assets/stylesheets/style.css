@@ -65,7 +65,7 @@ header {
 
 
 .news {
-  height: 800px;
+  height: 1000px;
 
 }
 
@@ -86,7 +86,7 @@ header {
 }
 
 .posts {
-  height: 500px;
+  height: 750px;
   overflow: scroll;
 }
 
