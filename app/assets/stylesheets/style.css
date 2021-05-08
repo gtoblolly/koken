@@ -65,8 +65,8 @@ header {
 
 
 .news {
-  height: 1000px;
-
+  height: 900px;
+  position:relative;
 }
 
 .news_image {
@@ -86,13 +86,21 @@ header {
 }
 
 .posts {
-  height: 750px;
+  height: 650px;
   overflow: scroll;
 }
 
 .post {
   padding: 50px 0 0 200px;
   display: flex;
+}
+
+.yazirusi {
+  opacity: 0.3;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin: auto;
 }
 
 
