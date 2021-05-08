@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2021_04_19_110626) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "phone_number", null: false
+    t.integer "area", null: false
+    t.integer "contents", null: false
     t.text "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
