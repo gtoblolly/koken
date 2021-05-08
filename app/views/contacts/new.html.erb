@@ -30,6 +30,24 @@
 
   <div class="form-group">
     <div class="form-name">
+      <%= f.label :area, '施工予定現場' %>
+    </div>
+    <div class="form-content">
+      <%= f.select :area, [["東京都", "東京都"], ["神奈川県", "神奈川県"], ["埼玉県", "埼玉県"], ["千葉県", "千葉県"], ["その他","その他"]], include_blank: "選択してください" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-name">
+      <%= f.label :contents, '工事内容' %>
+    </div>
+    <div class="form-content">
+      <%= f.select :contents, [["戸建て", "戸建て"], ["マンション", "マンション"], ["テナント工事", "テナント工事"], ["現状回復", "現状回復"], ["その他","その他"]], include_blank: "選択してください" %> </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-name">
       <%= f.label :message, 'メッセージ' %>
     </div>
     <div class="form-content">
