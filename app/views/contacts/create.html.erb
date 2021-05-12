@@ -1,4 +1,19 @@
-<h1>送信が完了しました</h1>
-<p>お問い合わせいただき、誠にありがとうございます。</p>
-<p>お問い合わせ内容に関しまして、担当の者が確認の上、ご連絡差し上げます</p>
-<%= link_to "ホーム画面に戻る", tweets_path %>
+<div class="finish">
+  <div class="finish-text">
+    <div class="finish-group">
+      <h1>送信が完了しました</h1>
+    </div>
+    <div class="finish-group">
+      <%= @contact.name %>様
+    </div>
+    <div class="finish-group">
+      <p>お問い合わせいただき、誠にありがとうございます。</p>
+    </div>
+    <div class="finish-group">
+      <p>お問い合わせ内容に関しまして、担当の者が確認の上、ご連絡差し上げます</p>
+    </div>
+    <div class="finish-group">
+      <%= link_to "ホーム画面に戻る", tweets_path %>
+    </div>
+  </div>
+</div>
