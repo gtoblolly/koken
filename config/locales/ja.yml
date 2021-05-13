@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      contact:
+        name: お名前
+        email: メールアドレス
+        phone_number: 電話番号
+        area: 施工予定現場
+        contents: 工事内容
+        message: メッセージ

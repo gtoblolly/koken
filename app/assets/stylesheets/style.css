@@ -240,12 +240,6 @@ iframe {
 }
 
 
-.form-group {
-  flex-direction: column;
-}
-
-
-
 section img{
   max-width: 100%;
 }
@@ -306,4 +300,75 @@ li:last-of-type{
 .thumb4 {
   height: 150px;
   width: 119px;
+}
+
+
+.contact {
+  padding-top: 85px;
+}
+
+.contact h1 {
+  border-bottom: 1px solid black;
+  padding-left: 30px;
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  height: 30px;
+  width: 300px;
+  font-size: 19px;
+}
+
+.form-text {
+  height: 100px;
+  width: 600px;
+  font-size: 19px;
+}
+
+.form-name {
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.form-group {
+  padding-top: 20px;
+}
+
+select {
+  height: 30px;
+  width: 300px;
+  font-size: 19px;
+}
+
+.button {
+  height: 35px;
+  width: 75px;
+  font-size: 19px;
+}
+
+.ararm {
+  color: white;
+  background-color: red;
+  margin-left: 10px;
+}
+
+
+.finish{
+  text-align: center;
+  padding-top: 85px;
+}
+
+.finish-text {
+  padding-top: 100px;
+}
+
+.finish-group {
+  padding-top: 20px;
+  font-size: 20px;
 }
