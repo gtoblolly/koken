@@ -2,7 +2,7 @@
   <h1>お問い合わせフォーム</h1>
   <div class="contacts">
     <%= form_with(model: @contact, local: true) do |f| %>
-    
+    <%= render 'layouts/error_messages', model: f.object %>
     <div class="form-group">
       <div class="form-name">
         <%= f.label :name, 'お名前' %><span class="ararm">必須</span>
