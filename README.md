@@ -15,9 +15,9 @@
 [![Image from Gyazo](https://i.gyazo.com/2e0f151a882f4adca81903f6535ee092.png)](https://gyazo.com/2e0f151a882f4adca81903f6535ee092)
 
 # 実装予定の内容
-.企業側投稿機能  
-・管理者認証機能
-.閲覧数確認機能
+・企業側投稿機能  
+・管理者認証機能  
+・閲覧数確認機能
 
 # テーブル設計
 
