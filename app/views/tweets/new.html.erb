@@ -1,23 +1,56 @@
-<h1>管理画面</h1>
+<div class="control">
+  <h1>管理画面</h1>
+</div>
+<%# ログインボタンとログイン画面のURL
+<%= link_to "ログイン", new_user_session_path %>
+<%#http://localhost:3000/users/sign_in %>
+<div class="title_bar">
+  <h2>投稿フォーム</h2>
+</div>
+<div class="form">
+  <%= form_with(model: @tweet, local: true) do |form| %>
 
-<h2>投稿フォーム</h2>
-<%= form_with(model: @tweet, local: true) do |form| %>
-  <%= form.text_field :title, placeholder: "タイトル" %>
-  <%= form.file_field :image, placeholder: "画像" %>
-  <%= form.text_area :comment, placeholder: "コメント" %>
-  <%= form.submit "投稿" %>
-<% end %>
-
-<h2>投稿記事一覧<h2>
-<% @tweets.each do |tweet| %>
-  <%= link_to tweet_path(tweet.id), method: :get do %>
-  <div class="media_image">  
-    <%= image_tag tweet.image.variant(resize: '200x200') if tweet.image.attached? %>
+  <div class="field">
+    <%= form.text_field :title, placeholder: "タイトル", class: 'form-control' %>
   </div>
-  <div class="media_title">
-    <%= tweet.title %>
+
+  <div class="field">
+    <%= form.file_field :image, placeholder: "画像", class: 'form-image' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :comment, placeholder: "本文", class: 'form-text' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "投稿" %>
   </div>
   <% end %>
-  <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
-  <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
-<% end %>
+</div>
+
+<div class="news" id="target_news">
+  <div class="title_bar">
+    <h2>投稿記事一覧</h2>
+  </div>
+  <div class="posts">
+    <% @tweets.each do |tweet| %>
+    <%= link_to tweet_path(tweet.id), method: :get do %>
+    <div class="post">
+      <div class="news_image">  
+        <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+      </div>
+      <div class="news_title">
+        <%= tweet.title %>
+      </div>
+    </div>
+      <div class="btn">
+        <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+        <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="yazirusi">
+  <%= image_tag "yazirusi.png" %>
+  </div>
+</div>
