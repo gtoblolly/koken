@@ -78,11 +78,15 @@ header {
   width: 300px;
 }
 
-.news_title {
+.news_title,.btn {
   font-size: 40px;
   height: 150px;
   width: 100%;
   padding-left: 20px;
+}
+
+.btn {
+  padding-left: 200px;
 }
 
 .posts {
@@ -113,7 +117,7 @@ header {
   font-size: 20px;
 }
 
-.business_text {
+.business_text,.form {
   padding-left: 200px;
 }
 
@@ -324,6 +328,12 @@ li:last-of-type{
   font-size: 19px;
 }
 
+.form-image{
+  height: 30px;
+  width: 300px;
+  font-size: 15px;
+}
+
 .form-text {
   height: 100px;
   width: 600px;
@@ -358,17 +368,10 @@ select {
   margin-left: 10px;
 }
 
+.field {
+  margin: 20px 0;
+}
 
-.finish{
-  text-align: center;
+.control {
   padding-top: 85px;
-}
-
-.finish-text {
-  padding-top: 100px;
-}
-
-.finish-group {
-  padding-top: 20px;
-  font-size: 20px;
 }
