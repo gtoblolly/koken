@@ -1,7 +1,5 @@
 .title_bar {
   font-size: 20px;
-  height: 150px;
-  width: 300px;
   padding: 30px 0 0 30px;
 }
 
@@ -110,7 +108,7 @@ header {
 
 
 .business {
-  height: 700px;
+  height: 500px;
 }
 
 .business_title{
@@ -125,17 +123,14 @@ header {
   display: flex;
 }
 
-.business_image {
-  padding-right: 200px;
-}
-
 .business_comment {
   font-size: 19px;
 }
 
 
 .example {
-  height: 2000px;
+  height: auto;
+  width: 100vw;
 }
 
 .example_upper-contents {
@@ -150,15 +145,32 @@ header {
   padding: 80px 200px 0 200px;
 }
 
-.example_comment {
-  font-size: 30px;
-  padding-left: 20px;
-}
-
 .example_text {
   font-size: 19px;
-  padding-left: 22px;
 }
+
+.example_content {
+  padding: 30px 200px 30px 200px;
+}
+
+.example_image {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example_image_left {
+  width: 45%;
+}
+
+.example_image_right {
+  width: 45%;
+}
+
+.example_img {
+  width: 100%;
+  height: auto;
+}
+
 
 
 .office_image{
@@ -170,14 +182,22 @@ header {
   font-size: 20px;
 }
 
-.overview_contents {
+.overview_content, .overview_item {
   display: flex;
-  padding-left: 200px;
 }
 
-.overview_text {
+.overview_content {
+  padding: 0 200px 0 200px;
+  justify-content: space-between;
+}
+
+.overview_item {
+  border-bottom: 1px dotted black;
   font-size: 19px;
-  padding-top: 150px;
+}
+
+.overview_item_left {
+  width: 150px;
 }
 
 
@@ -212,10 +232,6 @@ header {
   padding-left: 100px;
 }
 
-.map {
-
-}
-
 
 .show_tweet {
   padding-top: 200px;
@@ -239,8 +255,7 @@ header {
 
 iframe {
   height: 500px;
-  width: 1260px;
-  padding: 50px 0 0 200px;
+  width: 600px;
 }
 
 
