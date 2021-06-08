@@ -23,11 +23,18 @@
     <% @tweets.each do |tweet| %>
     <%= link_to tweet_path(tweet.id), method: :get do %>
     <div class="post">
-      <div class="news_image">  
-        <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+      <div class="post_left">
+        <div class="news_image">  
+          <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+        </div>
       </div>
-      <div class="news_title">
-        <%= tweet.title %>
+      <div class="post_right">
+        <div class="news_date">
+          <%= l tweet.created_at %>
+        </div>
+        <div class="news_title">
+          <%= tweet.title %>
+        </div>
       </div>
     </div>
     <% end %>

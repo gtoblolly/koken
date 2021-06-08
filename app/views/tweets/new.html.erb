@@ -18,16 +18,23 @@
     <% @tweets.each do |tweet| %>
     <%= link_to tweet_path(tweet.id), method: :get do %>
     <div class="post">
-      <div class="news_image">  
-        <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+      <div class="post_left">
+        <div class="news_image">  
+          <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+        </div>
       </div>
-      <div class="news_title">
-        <%= tweet.title %>
+      <div class="post_right">
+        <div class="news_date">
+          <%= l tweet.created_at %>
+        </div>
+        <div class="news_title">
+          <%= tweet.title %>
+        </div>
       </div>
     </div>
       <div class="btn">
-        <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
         <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+        <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
       </div>
     <% end %>
     <% end %>
