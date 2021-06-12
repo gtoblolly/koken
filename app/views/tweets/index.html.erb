@@ -14,37 +14,54 @@
   </div>
 </div>
 
-
-<div class="news" id="target_news">
+<div class="ofice" id="target_guide">
   <div class="title_bar">
-    <h1>News</h1>
+    <h1>会社案内</h1>
   </div>
-  <div class="posts">
-    <% @tweets.each do |tweet| %>
-    <%= link_to tweet_path(tweet.id), method: :get do %>
-    <div class="post">
-      <div class="post_left">
-        <div class="news_image">  
-          <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
-        </div>
+  <div class="business_contents">
+    <div class="business_text">
+      <div class="business_title">
+        <h2>社名に込めた想い</h2>
       </div>
-      <div class="post_right">
-        <div class="news_date">
-          <%= l tweet.created_at %>
-        </div>
-        <div class="news_title">
-          <%= tweet.title %>
-        </div>
+      <div class="business_comment">
+        <p>
+        私たちは【地域・社会・関わる皆様一人一人に”コーケン”する】を企業理念として活動しています。<br>
+        お客様の家をより⻑く、より快適に過ごして頂けるように様々なニーズの工事に対応し、<br>
+        今よりもより愛着を持っていただけるような住まいと暮らしをご提案致します。<br>
+        また、テナントや商業施設などスケルトン工事や居抜き物件の新装工事、業態変更による改装工事等<br>
+        理想を現実に、付加価値をつけより良い空間づくりを行います。<br>
+        皆様に”コーケン”できるよう、丁寧なヒアリングと確かな品質、<br>
+        そして円滑な工事の遂行をお約束します。
+        </p>
       </div>
     </div>
-    <% end %>
-    <% end %>
-  </div>
-  <div class="yazirusi">
-  <%= image_tag "yazirusi.png" %>
   </div>
 </div>
 
+<div class="business" id="target_project">
+  <div class="title_bar">
+    <h1>事業内容</h1>
+  </div>
+  <div class="business_contents">
+    <div class="business_text">
+      <div class="business_title">
+        <h2>建築事業を柱に</h2>
+      </div>
+      <div class="business_comment">
+        <p>
+        神奈川県川崎市に拠点を構える工務店です。<br>
+        主にマンションや戶建てのフルリノベーションから部分リフォーム、または原状回復工事を請け負っています。<br>
+        その他テナントや商業施設のリニューアル工事も請け負っています。<br>
+        また、建築の知識を生かし、コンサルタント業務や不動産売買のご紹介、ご提案から含め<br>
+        お客様のニーズに合わせた設計者様のご紹介もしております。
+        </p>
+      </div>
+    </div>
+    <div class="overview_image">
+      <%= image_tag "logo.jpg", :size =>'340x300' %>
+    </div>
+  </div>
+</div>
 
 <div class="example" id="target_instance">
 
@@ -284,55 +301,36 @@
   </div>
 </div>
 
-
-<div class="business" id="target_project">
+<div class="news" id="target_news">
   <div class="title_bar">
-    <h1>事業内容</h1>
+    <h1>News</h1>
   </div>
-  <div class="business_contents">
-    <div class="business_text">
-      <div class="business_title">
-        <h2>建築事業を柱に</h2>
+  <div class="posts">
+    <% @tweets.each do |tweet| %>
+    <%= link_to tweet_path(tweet.id), method: :get do %>
+    <div class="post">
+      <div class="post_left">
+        <div class="news_image">  
+          <%= image_tag tweet.image,class:"item-box-img" if tweet.image.attached? %>
+        </div>
       </div>
-      <div class="business_comment">
-        <p>
-        神奈川県川崎市に拠点を構える工務店です。<br>
-        主にマンションや戶建てのフルリノベーションから部分リフォーム、または原状回復工事を請け負っています。<br>
-        その他テナントや商業施設のリニューアル工事も請け負っています。<br>
-        また、建築の知識を生かし、コンサルタント業務や不動産売買のご紹介、ご提案から含め<br>
-        お客様のニーズに合わせた設計者様のご紹介もしております。
-        </p>
+      <div class="post_right">
+        <div class="news_date">
+          <%= l tweet.created_at %>
+        </div>
+        <div class="news_title">
+          <%= tweet.title %>
+        </div>
       </div>
     </div>
-    <div class="overview_image">
-      <%= image_tag "logo.jpg", :size =>'340x300' %>
-    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="yazirusi">
+  <%= image_tag "yazirusi.png" %>
   </div>
 </div>
 
-
-<div class="ofice" id="target_guide">
-  <div class="title_bar">
-    <h1>会社案内</h1>
-  </div>
-  <div class="business_contents">
-    <div class="business_text">
-      <div class="business_title">
-        <h2>社名に込めた想い</h2>
-      </div>
-      <div class="business_comment">
-        <p>
-        私たちは【地域・社会・関わる皆様一人一人に”コーケン”する】を企業理念として活動しています。<br>
-        お客様の家をより⻑く、より快適に過ごして頂けるように様々なニーズの工事に対応し、<br>
-        今よりもより愛着を持っていただけるような住まいと暮らしをご提案致します。<br>
-        また、テナントや商業施設などスケルトン工事や居抜き物件の新装工事、業態変更による改装工事等<br>
-        理想を現実に、付加価値をつけより良い空間づくりを行います。<br>
-        皆様に”コーケン”できるよう、丁寧なヒアリングと確かな品質、<br>
-        そして円滑な工事の遂行をお約束します。
-        </p>
-      </div>
-    </div>
-  </div>
 
   <div class="overview">
     <div class="title_bar">
