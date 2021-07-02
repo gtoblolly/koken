@@ -1,17 +1,21 @@
-<div class="title_bar">
-    <h1>メディア</h1>
-</div>
-<div class="office_image">
-    <%= image_tag "maturi.png", :size =>'1260x500' %>
-</div>
-<div class="show_tweet">
-  <div class="show_image">
-    <%= image_tag @tweet.image,class:"show_img" %>
-  </div>
-  <div class="show_title">
-    <%= @tweet.title %>
-  </div>
-  <div class="show_comment">
-    <%= @tweet.comment %>
+<div class="show">
+  <div class="title_bar">
+        <h1>News</h1>
+    </div>
+  <div class="show_contents">
+    <div class="show_tweet">
+      <div class="show_image">
+        <%= image_tag @tweet.image,class:"show_img" %>
+      </div>
+      <div class="news_date">
+        <%= l @tweet.created_at %>
+      </div>
+      <div class="show_title">
+        <%= @tweet.title %>
+      </div>
+      <div class="show_comment">
+        <%= simple_format(@tweet.comment) %>
+      </div>
+    </div>
   </div>
 </div>

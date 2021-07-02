@@ -8,3 +8,6 @@ ja:
         area: 施工予定現場
         contents: 工事内容
         message: メッセージ
+  time:
+    formats:
+      default: "%Y/%m/%d"

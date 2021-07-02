@@ -3,6 +3,7 @@ const guide = document.getElementById("guide")
 const project = document.getElementById("project")
 const instance = document.getElementById("instance")
 const news = document.getElementById("news")
+const overview = document.getElementById("overview")
 
 guide.addEventListener('click', () => {
  const TargetGuide = document.getElementById("target_guide")
@@ -43,6 +44,18 @@ project.addEventListener('click', () => {
  news.addEventListener('click', () => {
   const TargetNews = document.getElementById("target_news")
   const rect = TargetNews.getBoundingClientRect().top;
+  const offset = window.pageYOffset;
+  const gap = 50;
+  const target = rect + offset - gap;
+  window.scrollTo({
+   top: target,
+   behavior: "smooth"
+ });
+ });
+
+ overview.addEventListener('click', () => {
+  const TargetOverview = document.getElementById("target_overview")
+  const rect = TargetOverview.getBoundingClientRect().top;
   const offset = window.pageYOffset;
   const gap = 50;
   const target = rect + offset - gap;

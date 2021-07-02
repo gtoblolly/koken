@@ -1,0 +1,20 @@
+<div class="form">
+  <%= form_with(model: @tweet, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.text_field :title, placeholder: "タイトル", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.file_field :image, placeholder: "画像", class: 'form-image' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :comment, placeholder: "本文", class: 'form-text' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "投稿" %>
+  </div>
+  <% end %>
+</div>
