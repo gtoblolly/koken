@@ -1,3 +1,7 @@
 <% @examples.each do |example| %>
   <%= example.content %>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_example_path(example) %>
+    <%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 <% end %>
