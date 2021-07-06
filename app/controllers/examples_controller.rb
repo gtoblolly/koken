@@ -1,5 +1,6 @@
 class ExamplesController < ApplicationController
   before_action :set_example, only: %i[ show edit update destroy ]
+  before_action :move_to_index
 
   # GET /examples or /examples.json
   def index
@@ -66,4 +67,11 @@ class ExamplesController < ApplicationController
     def example_params
       params.require(:example).permit(:content)
     end
+
+    def move_to_index
+      unless user_signed_in?
+        redirect_to root_path
+      end
+    end
+
 end
