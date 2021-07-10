@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Examples</h1>
+<h1>施工事例管理画面</h1>
 
 <table>
   <thead>
@@ -12,9 +12,9 @@
   <tbody>
     <% @examples.each do |example| %>
       <tr>
-        <td><%= link_to 'Show', example %></td>
-        <td><%= link_to 'Edit', edit_example_path(example) %></td>
-        <td><%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', example %></td>
+        <td><%= link_to '編集', edit_example_path(example) %></td>
+        <td><%= link_to '削除', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Example', new_example_path %>
+<%= link_to '施工事例を投稿する', new_example_path %>

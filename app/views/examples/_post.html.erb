@@ -1,7 +1,12 @@
 <% @examples.each do |example| %>
-  <%= example.content %>
-  <% if user_signed_in? %>
-    <%= link_to 'Edit', edit_example_path(example) %>
-    <%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
+  <div class="example_content">
+    <%= example.content %>
+    <% if user_signed_in? %>
+      <%= link_to '編集', edit_example_path(example) %>
+      <%= link_to '削除', example, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <% i = strip_tags(example.content.to_s).split(" ") %>
+    <%= i[0]%>
+    <%= example_content.first %>
+  </div>
 <% end %>

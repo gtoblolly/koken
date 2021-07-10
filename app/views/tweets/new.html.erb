@@ -5,16 +5,14 @@
 <%= link_to "ログイン", new_user_session_path %>
 <%#http://localhost:3000/users/sign_in %>
 <div class="title_bar">
-  <h2>投稿フォーム</h2>
+  <h2>News投稿フォーム</h2>
 </div>
 
 <%= render partial: "form", locals: {tweet: @tweet }%>
 
-<%= link_to "施工事例を投稿する", new_example_path %>
-
 <div class="news" id="target_news">
   <div class="title_bar">
-    <h2>投稿記事一覧</h2>
+    <h2>News投稿記事一覧</h2>
   </div>
   <div class="posts">
     <% @tweets.each do |tweet| %>
@@ -46,4 +44,15 @@
   </div>
 </div>
 
-<%= render "examples/post" %>
+
+<div class="title_bar">
+    <%= link_to "施工事例を投稿する", new_example_path %>
+</div>
+
+<div class="title_bar">
+    <h2>施工事例一覧</h2>
+</div>
+
+<div class="example_contents">
+  <%= render "examples/post" %>
+</div>
