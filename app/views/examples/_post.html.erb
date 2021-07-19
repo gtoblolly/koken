@@ -1,0 +1,21 @@
+<div class="example_contents">
+<% @examples.each do |example| %>
+    <%= link_to example_path(example.id), method: :get do %>
+      <div class="example_content">
+        <div class="example_left">
+          <%= image_tag example.images[0],class:"item-box-img" if example.images.attached? %>
+        </div>
+        <div class="example_right">
+          <%= simple_format(example.title) %>
+        </div>
+      </div>
+      <div class="btn">
+      <% if user_signed_in? %>
+        <%= link_to '編集', edit_example_path(example) %>
+        <%= link_to '削除', example, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      </div>
+      
+    <% end %>
+  <% end %>
+</div>

@@ -4,6 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    @examples = Example.all
   end
 
   def create
@@ -14,6 +15,7 @@ class TweetsController < ApplicationController
   def new
     @tweet = Tweet.new
     @tweets = Tweet.all
+    @examples = Example.all
   end
 
   def show

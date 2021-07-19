@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>施工事例管理画面</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examples.each do |example| %>
+      <tr>
+        <td><%= link_to '詳細', example %></td>
+        <td><%= link_to '編集', edit_example_path(example) %></td>
+        <td><%= link_to '削除', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '施工事例を投稿する', new_example_path %>
