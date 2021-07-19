@@ -2,5 +2,7 @@
 
 <%= @example.content %>
 
-<%= link_to '編集', edit_example_path(@example) %> |
-<%= link_to "管理画面へ", new_tweet_path %>
+<% if user_signed_in? %>
+  <%= link_to '編集', edit_example_path(@example) %> |
+  <%= link_to "管理画面へ", new_tweet_path %>
+<% end %>

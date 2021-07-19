@@ -1,6 +1,6 @@
 class ExamplesController < ApplicationController
   before_action :set_example, only: %i[ show edit update destroy ]
-  before_action :move_to_index
+  before_action :move_to_index, except: [:show]
 
   # GET /examples or /examples.json
   def index
@@ -65,7 +65,7 @@ class ExamplesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def example_params
-      params.require(:example).permit(:content)
+      params.require(:example).permit(:content, :images, :title)
     end
 
     def move_to_index
