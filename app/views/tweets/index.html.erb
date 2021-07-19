@@ -69,9 +69,9 @@
     <h1>施工事例</h1>
   </div>
 
-  <div class="example_contents">
+
     <%= render "examples/post" %>
-  </div>
+
 
 </div>
 
@@ -97,6 +97,12 @@
         </div>
       </div>
     </div>
+    <% if user_signed_in? %>
+    <div class="btn">
+        <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+        <%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
     <% end %>
     <% end %>
   </div>
